@@ -122,7 +122,7 @@ include "koneksi.php";
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                        <h4 class="text-primary">About Kami</h4>
+                        <h4 class="text-primary">Tentang Kami</h4>
                         <h1 class="display-5 mb-4"><?php echo"$k_k[nama]";?></h1>
                         <p class="text ps-4 mb-4"><?php echo"$k_k[isi]";?>
                         </p>
@@ -290,6 +290,7 @@ while ($t=mysqli_fetch_array($tebaru)){ ?>
                 </div>
             </div>
         </div>
+        <!-- Testimonial End -->
         <!-- Testimonial End -->
 
 

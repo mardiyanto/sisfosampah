@@ -182,30 +182,22 @@ $no++;
 	 <table class="table table-bordered table-striped" id="table-datatable">
                                     <thead>
                                         <tr> <th>No</th>
-                                            <th>Nama Aset</th>
-                                            <th>Kategori</th>
-                                            <th>Ruangan</th>
-											<th>Spesifikasi</th>											
-											<th>Jumlah</th>
-											<th>Kondisi</th>
-											<th>Tgl Beli</th>											
+                                            <th>judul</th>
+                                            <th>url</th>
+                                            <th>Gambar</th>											
                                         </tr>
                                     </thead><tbody>
 			
 	<?php		
 $no=0;
-$sql=mysqli_query($koneksi," SELECT * FROM aset,kategori,ruang WHERE aset.id_kategori=kategori.id_kategori AND aset.id_ruang=ruang.id_ruang  ORDER BY aset.id_aset ASC");
+$sql=mysqli_query($koneksi," SELECT * FROM berita WHERE jenis='informasi' ORDER BY id_berita DESC");
 while ($t=mysqli_fetch_array($sql)){	
 $no++;
                                     echo"
                                         <tr><td>$no</td>
-                                            <td>$t[nama_aset]</td>
-                                            <td>$t[kategori]</td>
-											<td>$t[nama_ruang]</td>
-											<td>$t[spek]</td>
-											<td>$t[jumlah]</td>
-											<td>$t[kondisi]</td>
-											<td>$t[tgl_beli]</td>
+                                            <td>$t[judul]</td>
+                                            <td>$t[url]</td>
+											<td> <img src='../uploads/qrcode/$t[id_berita].png' width='321' alt='QR Code'></td>
                                         </tr>";
 }?>
                                     </tbody></table>

@@ -4,7 +4,7 @@
                 <div class="row gx-0 align-items-center" style="height: 45px;">
                     <div class="col-lg-8 text-center text-lg-start mb-lg-0">
                         <div class="d-flex flex-wrap">
-                            <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Lokasi Kami</a>
+                            <a href="https://maps.app.goo.gl/Dob4twAciN5zKjy1A" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Lokasi Kami</a>
                             <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i><?php echo"$k_k[alias]";?></a>
                             <a href="#" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i><?php echo"$k_k[tahun]";?></a>
                         </div>
@@ -39,16 +39,7 @@
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav ms-auto py-0">
                         <a href="index.php" class="nav-item nav-link active">Beranda</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-bs-toggle="dropdown"><span class="dropdown-toggle">Profil Kami</span></a>
-                            <div class="dropdown-menu m-0">
-                            <?php $sql=mysqli_query($koneksi," SELECT * FROM berita WHERE jenis='halaman' ORDER BY id_berita DESC ");
-while ($r=mysqli_fetch_array($sql)){ 
-                       echo" <a href='utama.php?aksi=home&id_berita=$r[id_berita]' class='dropdown-item'>$r[judul]</a>";
- } ?>
-                                
-                            </div>
-                        </div>
+						 <a href="index.php#tentang" class="nav-item nav-link">Tentang Kami</a>
                         <a href="index.php#informasi" class="nav-item nav-link">informasi</a>
                 <a href="index.php#galeri" class="nav-item nav-link">Galeri</a>
                 
